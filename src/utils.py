@@ -275,7 +275,7 @@ def verify_sweep_params(hyperparams):
 
 def load_checkpoint(config, model, classifier_name, device):
     print("Initializing pre-trained weights...")
-    checkpoint = torch.load(config.checkpoint_path, map_location=device)
+    checkpoint = torch.load(config.checkpoint_path, map_location=device, weights_only=True)
 
     encoder_weights = checkpoint["model_state_dict"]
     for k in list(encoder_weights.keys()):
