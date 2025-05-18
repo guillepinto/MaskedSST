@@ -8,7 +8,6 @@ from einops.layers.torch import Rearrange
 from functools import reduce
 from operator import mul
 
-from utils.tensor_utils import MoveAxis
 from ..hyperspectral_patch_embed import BlockwisePatchEmbedding, GroupedHyperspectralPatchEmbed
 from .pos_embed import get_1d_sincos_pos_embed_from_grid, get_2d_sincos_pos_embed
 
